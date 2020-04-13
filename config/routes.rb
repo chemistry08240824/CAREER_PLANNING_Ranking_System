@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get "users/:id/edit" => "users#edit"
   
   get "about" => "operation#top"
-  get "about/service" => "operation#top"
+  get "about/service" => "operation#service"
   get "about/company" => "operation#company"
   get "about/system" => "operation#system"
   get "about/contact" => "operation#contact"
