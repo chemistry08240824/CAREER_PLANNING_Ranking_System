@@ -13,12 +13,16 @@
  *= require_tree .
  *= require_self
  */
- 
-
-
+ /*以下はheader_footerの固定化*/ 
+wrapper{
+    position: absolute;
+}
 header{
+    z-index: 10;
     width: 100%;
+    position: relative;
     position: fixed;
+    top: 0;
 }
 
 footer{
@@ -27,3 +31,4 @@ footer{
     bottom: 0;
 }
 
+/*以下はlogin_formのCSS*/

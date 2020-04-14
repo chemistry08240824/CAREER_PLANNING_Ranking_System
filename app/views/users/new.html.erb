@@ -1,2 +1,32 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<div class="text-center pt-4">
+  <h1>会員登録</h1>
+</div>
+
+<div class="row">
+  <div class="col-6 offset-3">
+    
+     <% @user.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+        <% end %>
+    
+    <%= form_tag(@user) do %>
+    <div class="form-group">
+    <p>名前</p>
+    <input name="name" value="<%= @user.name %>" class="form-control"></input>
+    </div>
+    <div class="form-group">
+    <p>メールアドレス</p>
+    <input name="email" value="<%= @user.email %>" class="form-control"></input>
+    </div>
+    <div class="form-group">
+    <p>パスワード</p>
+    <input type="password" name="password" value="<%= @user.password %>" class="form-control"></input>
+    </div>
+    
+    <input type="submit" value="登録する" class="form-control btn btn-info btn-block mt-5"></input>
+   <% end %>
+    
+  </div>
+</div>
