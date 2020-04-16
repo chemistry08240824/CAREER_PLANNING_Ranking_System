@@ -1,6 +1,6 @@
 <h2 class="pt-2">Users#index</h2>
-<h2><% @users.each do |user| %>
+<% @users.each do |user| %>
    <a href=<%= user_path user %> class="d-block">
        <%= user.name %>
    </a>
-<% end %></h2>
+<% end %>
