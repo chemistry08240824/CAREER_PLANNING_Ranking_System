@@ -67,3 +67,5 @@ gem 'aws-sdk-s3', require: false
 
 #https://qiita.com/ngron/items/95846bd630a723e00038
 gem "jquery-rails"
+
+gem 'rails_admin', '~> 2.0.0.beta'
