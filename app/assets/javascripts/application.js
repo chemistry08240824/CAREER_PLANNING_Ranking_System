@@ -14,3 +14,9 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require jquery
+//= require jquery_ujs
+
+$(document).on('turbolinks:load', function() {
+    $(".users-show #image").css("height",$(".users-show #image").width())
+});

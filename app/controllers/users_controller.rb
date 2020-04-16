@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   before_action :ensure_correct_user, only: [:edit, :update]
  
   def index
-    @users = User.order(:money)
+    @users = User.where.not(money: nil).order(money: "desc")
   end
 
   def show
@@ -27,6 +27,7 @@ class UsersController < ApplicationController
   
   def update
     @user.name=params[:name]
+    @user.image.attach params[:user][:image]
     @user.email=params[:email]
     @user.college=params[:college]
     @user.group=params[:group]

@@ -61,3 +61,9 @@ gem 'bcrypt', '~> 3.1.7'
 group :production do
   gem 'pg', '>= 0.18', '< 2.0'
 end
+
+#https://bagelee.com/programming/ruby-on-rails/active-storage-direct-upload/
+gem 'aws-sdk-s3', require: false
+
+#https://qiita.com/ngron/items/95846bd630a723e00038
+gem "jquery-rails"

@@ -25,10 +25,12 @@
       
        <%= render 'layouts/header'  %>
         <div class="clear"></div>
+        <main style="margin-bottom: 56px;">
           <div class="container">
            <%= render 'layouts/flash_messages' %>
            <%= yield %>
           </div>
+        </main>
         <div class="clear"></div>
        <%= render 'layouts/footer' %>
    

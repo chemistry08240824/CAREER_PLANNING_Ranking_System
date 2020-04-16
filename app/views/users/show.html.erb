@@ -1,12 +1,11 @@
-<div class="users-mypage mb-5">
+<div class="users-show mb-5">
   <div class="container mb-5">
     <div class="form-heading text-center pt-4"><h2><%= @mypage_flag ? 'マイ' : (@user.name + 'さんの') %>ページ</h2></div>
       <div class="form-body">
         <div class="row">
           <div class="col-md-8 offset-md-2 col-sm-10 offset-sm-1">
-
+           <%= image_tag(@current_user.image, {class: "w-100", id: "image", style: "object-fit: cover;"})  %>
          　<table class="table">
-         　  
             <tr><td>ユーザー名</td><td><%= @user.name %></td></tr>
             <tr><td>売り上げ</td><td>¥ <%= @user.money %></td></tr>
             <tr><td>大学名</td><td><%= @user.college %></td></tr>
@@ -15,14 +14,15 @@
             <tr><td>受講コース</td><td><%= @user.course %></td></tr>
             <tr><td>興味のある業種</td><td><%= @user.interest_industry %></td></tr>
 　　　　　</table>
-　　　　　
+　　　　　<div class="col-8 offset-2 p-0">
+         <%= link_to("編集する","/users/#{@user.id}/edit",:class => "buttom btn btn-block mb-5") if @mypage_flag %>
+         </div>
 　　　　　
          </div>
           
         </div>
-        <div class="col-8 offset-2">
-         <%= link_to("編集する","/users/#{@user.id}/edit",:class => "buttom btn btn-block mb-5") if @mypage_flag %>
-         </div>
+        
       </div>
+     
   </div>
 </div>
