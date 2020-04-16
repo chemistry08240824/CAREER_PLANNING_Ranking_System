@@ -5,7 +5,7 @@
         <%= form_tag(user_path(@current_user),{action: 'update', method: 'patch', multipart: true}) do %>
         
         <div class="row">
-          <div class="col-8 offset-2">
+          <div class="col-md-8 offset-md-2 col-sm-10 offset-sm-1">
         
           <div class="form-group">
           <p>ユーザー名</p>
@@ -40,10 +40,14 @@
           <input name="interest_industry" value="<%= @current_user.interest_industry %>" class="form-control">
           </div>
           
-          <input type="submit" value="保存する" class="buttom btn btn-block mb-5">
         <% end %>
           
          </div>
+         
+         <div class="col-8 offset-2">
+         <input type="submit" value="保存する" class="buttom btn btn-block mb-5">
+         </div>
+         
         </div>
       </div>
     
