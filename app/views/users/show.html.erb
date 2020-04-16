@@ -1,48 +1,24 @@
-
 <div class="users-mypage mb-5">
   <div class="container mb-5">
     <div class="form-heading text-center pt-4"><h2><%= @mypage_flag ? 'マイ' : (@user.name + 'さんの') %>ページ</h2></div>
       <div class="form-body">
-        
         <div class="row">
-          <div class="col-6 offset-3">
-        
-          <div class="form-group">
-          <p>ユーザー名</p>
-          <input name="name" value="<%= @user.name %>" class="form-control">
-          </div>
-          
-          <!-- 画像アップ機能<p>画像</p>
-          <input name="image" type="file">-->
-          
-          <div class="form-group">
-          <p>メールアドレス</p>
-          <input name="email" value="<%= @user.email %>" class="form-control">
-          </div>
-          <div class="form-group">
-          <p>大学名</p>
-          <input name="college" value="<%= @user.college %>" class="form-control">
-          </div>
-          <div class="form-group">
-          <p>所属グループ</p>
-          <input name="group" value="<%= @user.group %>" class="form-control">
-          </div>
-          <div class="form-group">
-          <p>キャリアタイプ</p>
-          <input name="career" value="<%= @user.career %>" class="form-control">
-          </div>
-          <div class="form-group">
-          <p>受講コース</p>
-          <input name="course" value="<%= @user.course %>" class="form-control">
-          </div>
-          <div class="form-group">
-          <p>興味のある業種</p>
-          <input name="interest_industry" value="<%= @user.interest_industry %>" class="form-control">
-          </div>
-           <%= link_to("編集する","/users/#{@user.id}/edit",:class => "btn btn-info btn-block mb-5") if @mypage_flag %>
+          <div class="col-8 offset-2">
+
+         　<table class="table mt-3">
+         　  
+            <tr><td>ユーザー名</td><td><%= @user.name %></td></tr>
+            <tr><td>売り上げ</td><td>¥ <%= @user.money %></td></tr>
+            <tr><td>大学名</td><td><%= @user.college %></td></tr>
+            <tr><td>所属グループ</td><td><%= @user.group %></td></tr>
+            <tr><td>キャリアタイプ</td><td><%= @user.career %></td></tr>
+            <tr><td>受講コース</td><td><%= @user.course %></td></tr>
+            <tr><td>興味のある業種</td><td><%= @user.interest_industry %></td></tr>
+　　　　　</table>
+　　　　　<%= link_to("編集する","/users/#{@user.id}/edit",:class => "buttom btn btn-block mb-5") if @mypage_flag %>
+　　　　　
          </div>
         </div>
       </div>
-    
   </div>
 </div>
