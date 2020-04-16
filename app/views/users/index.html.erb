@@ -1,10 +1,6 @@
-<h1 class="pt-2">あああああああああああ</h1>
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
-<p>このページにランキング一覧が表示</p>
-<p>その一覧のユーザーをタップすると各ユーザーの詳細出る</p>
-<% @users.each do |user| %>
-   <a href=<%= user_path user %>, class="d-block">
+<h2 class="pt-2">Users#index</h2>
+<h2><% @users.each do |user| %>
+   <a href=<%= user_path user %> class="d-block">
        <%= user.name %>
    </a>
-<% end %>
+<% end %></h2>

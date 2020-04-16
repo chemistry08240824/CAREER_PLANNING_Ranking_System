@@ -9,7 +9,7 @@
         
           <div class="form-group">
           <p>ユーザー名</p>
-          <input name="name" value="<%= @current_user.name %>" class="form-control">
+          <input name="name" value="<%= @user.name %>" class="form-control">
           </div>
           
           <!-- 画像アップ機能<p>画像</p>
@@ -17,29 +17,29 @@
           
           <div class="form-group">
           <p>メールアドレス</p>
-          <input name="email" value="<%= @current_user.email %>" class="form-control">
+          <input name="email" value="<%= @user.email %>" class="form-control">
           </div>
           <div class="form-group">
           <p>大学名</p>
-          <input name="college" value="<%= @current_user.college %>" class="form-control">
+          <input name="college" value="<%= @user.college %>" class="form-control">
           </div>
           <div class="form-group">
           <p>所属グループ</p>
-          <input name="group" value="<%= @current_user.group %>" class="form-control">
+          <input name="group" value="<%= @user.group %>" class="form-control">
           </div>
           <div class="form-group">
           <p>キャリアタイプ</p>
-          <input name="career" value="<%= @current_user.career %>" class="form-control">
+          <input name="career" value="<%= @user.career %>" class="form-control">
           </div>
           <div class="form-group">
           <p>受講コース</p>
-          <input name="course" value="<%= @current_user.course %>" class="form-control">
+          <input name="course" value="<%= @user.course %>" class="form-control">
           </div>
           <div class="form-group">
           <p>興味のある業種</p>
-          <input name="interest_industry" value="<%= @current_user.interest_industry %>" class="form-control">
+          <input name="interest_industry" value="<%= @user.interest_industry %>" class="form-control">
           </div>
-           <%= link_to("編集する","/users/#{@current_user.id}/edit",:class => "btn btn-info btn-block mb-5") if @mypage_flag %>
+           <%= link_to("編集する","/users/#{@user.id}/edit",:class => "btn btn-info btn-block mb-5") if @mypage_flag %>
          </div>
         </div>
       </div>

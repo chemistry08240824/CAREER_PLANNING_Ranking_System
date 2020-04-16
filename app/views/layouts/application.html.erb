@@ -18,12 +18,19 @@
   </head>
 
   <body>
-   <%= render 'layouts/header'  %>
+      
+      <div class="bg"></div>
+      <div class="bg bg2"></div>
+      <div class="bg bg3"></div>
+      
+    <%= render 'layouts/header'  %>
+
      <div class="container">
       <%= render 'layouts/flash_messages' %>
-
       <%= yield %>
-    </div>
-   <%= render 'layouts/footer' %>
+     </div>
+    <%= render 'layouts/footer' %>
+   
+   
   </body>
 </html>

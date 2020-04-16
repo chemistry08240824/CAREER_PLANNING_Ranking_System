@@ -86,7 +86,7 @@ class UsersController < ApplicationController
   
     def ensure_correct_user
       if @current_user != @user
-        flash[:notice] = "権限がありません"
+        flash[:danger] = "権限がありません"
         redirect_to root_url
       end
     end
