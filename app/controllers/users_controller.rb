@@ -27,7 +27,7 @@ class UsersController < ApplicationController
   
   def update
     @user.name=params[:name]
-    @user.image.attach params[:user][:image]
+    @user.image.attach(params[:user][:image]) if params[:user]
     @user.email=params[:email]
     @user.college=params[:college]
     @user.group=params[:group]
