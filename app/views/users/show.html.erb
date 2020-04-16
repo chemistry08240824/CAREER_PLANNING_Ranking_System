@@ -3,7 +3,7 @@
     <div class="form-heading text-center pt-4"><h2><%= @mypage_flag ? 'マイ' : (@user.name + 'さんの') %>ページ</h2></div>
       <div class="form-body">
         <div class="row">
-          <div class="col-8 offset-2">
+          <div class="col-md-8 offset-md-2 col-sm-10 offset-sm-1">
 
          　<table class="table mt-3">
          　  
@@ -15,10 +15,14 @@
             <tr><td>受講コース</td><td><%= @user.course %></td></tr>
             <tr><td>興味のある業種</td><td><%= @user.interest_industry %></td></tr>
 　　　　　</table>
-　　　　　<%= link_to("編集する","/users/#{@user.id}/edit",:class => "buttom btn btn-block mb-5") if @mypage_flag %>
+　　　　　
 　　　　　
          </div>
+          
         </div>
+        <div class="col-8 offset-2">
+         <%= link_to("編集する","/users/#{@user.id}/edit",:class => "buttom btn btn-block mb-5") if @mypage_flag %>
+         </div>
       </div>
   </div>
 </div>
