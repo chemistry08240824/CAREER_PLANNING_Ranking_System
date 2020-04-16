@@ -120,3 +120,7 @@ h1 {
 .bottom:hover{
   background-color: #CCCCCC;
 }
+
+.clear{
+  clear: left;
+}

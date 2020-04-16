@@ -23,13 +23,14 @@
       <div class="bg bg2"></div>
       <div class="bg bg3"></div>
       
-    <%= render 'layouts/header'  %>
-
-     <div class="container">
-      <%= render 'layouts/flash_messages' %>
-      <%= yield %>
-     </div>
-    <%= render 'layouts/footer' %>
+       <%= render 'layouts/header'  %>
+        <div class="clear"></div>
+          <div class="container">
+           <%= render 'layouts/flash_messages' %>
+           <%= yield %>
+          </div>
+        <div class="clear"></div>
+       <%= render 'layouts/footer' %>
    
    
   </body>
