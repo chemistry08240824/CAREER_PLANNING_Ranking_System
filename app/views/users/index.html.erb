@@ -4,16 +4,16 @@
     <table class="table text-left">
       <tr>
         <th class="text-left m-0 pl-1">順位</th>
-        <th class="text-nowrap m-0">名前</th>
-        <th class="text-nowrap m-0">売上</th>
+        <th class="text-nowrap m-0 pl-1">名前</th>
+        <th class="text-nowrap m-0 pl-1">売上</th>
         <th class="text-nowrap m-0">団体</th>
       </tr>
       <% @users.each.with_index do |user,index| %>
       <tr>
-        <td class="text-left m-0"><%= index+1 %>位</td>
-        <td class="text-nowrap m-0"><%= link_to user.name,user ,class: "index_url"%></td>
-        <td class="text-nowrap m-0"><small>¥<%= user.money %></small></td>
-        <td class="text-nowrap m-0"><small><%= user.group %></small></td>
+        <td class="text-left m-0 pl-1"><%= index+1 %>位</td>
+        <td class="text-nowrap m-0 pl-1"><%= link_to user.name,user ,class: "index_url"%></td>
+        <td class="text-nowrap m-0 pl-1">¥<%= user.money %></td>
+        <td class="text-nowrap m-0"><%= user.group %></td>
       </tr>
         <% end %>
     </table>
