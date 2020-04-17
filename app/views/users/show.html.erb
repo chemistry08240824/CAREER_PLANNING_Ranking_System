@@ -4,7 +4,7 @@
       <div class="form-body">
         <div class="row">
           <div class="col-md-8 offset-md-2 col-sm-10 offset-sm-1">
-           <%= image_tag(@current_user.image, {class: "w-100", id: "image", style: "object-fit: cover;"})  %>
+           <%= image_tag(@user.image, {class: "w-100", id: "image", style: "object-fit: cover;"}) if @user.image.attached? %>
          　<table class="table">
             <tr><td>ユーザー名</td><td><%= @user.name %></td></tr>
             <tr><td>売り上げ</td><td>¥ <%= @user.money %></td></tr>

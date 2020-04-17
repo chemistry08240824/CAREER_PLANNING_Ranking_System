@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
   
-  before_action :authenticate_user, {only: [:edit, :mypage, :logout]}
+  before_action :authenticate_user, {only: [:edit, :update, :mypage, :logout]}
   before_action :forbid_login_user, {only: [:new, :create, :login_form, :login]}
   before_action :set_user, only: [:show, :edit, :update]
-  before_action :ensure_correct_user, only: [:edit]
+  before_action :ensure_correct_user, only: [:edit, :update]
  
   def index
     @users = User.where.not(money: nil).order(money: "desc")
@@ -27,7 +27,7 @@ class UsersController < ApplicationController
   
   def update
     @user.name=params[:name]
-    @user.image.attach(params[:user][:image]) if params[:user][:image]
+    @user.image.attach(params[:user][:image]) if params[:user]
     @user.email=params[:email]
     @user.college=params[:college]
     @user.group=params[:group]

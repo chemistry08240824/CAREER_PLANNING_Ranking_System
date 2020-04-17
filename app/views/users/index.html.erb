@@ -1,25 +1,22 @@
 <div class="users-ranking mb-5">
   <div class="container mb-5">
-    <div class="form-heading text-center pt-4 mb-0 pb-0"><h2>売上ランキング</h2></div> 
-　　 <table class="table m-0 p-0 mt-0 pt-0">
-　　   
-　　　<tr>
-　　　　<th>順位</th>
-　　　　<th>名前</th>
-　　　　<th>売上</th>
-　　　　
-　　　　<th>団体</th>
-　　　</tr>
-　　　<% @users.each.with_index do |user,index| %>
-　　　<tr class="m-0 p-0">
-　　　　<td><%= index+1 %>位</td>
-　　　　<td class="text-nowrap"><%= user.name %></td>
-　　　　<td class="text-nowrap">¥<%= user.money %></td>
-　　　　
-　　　　<td class="text-nowrap"><%= user.group %></td>
-　　　</tr>
-　　　<% end %>
-　　　
-　　 </table>
-  </div>
+    <div class="form-heading text-center mb-4 pt-4"><h2>売上ランキング</h2></div> 
+    <table class="table">
+      <tr>
+        <th>順位</th>
+        <th>名前</th>
+        <th>売上</th>
+        <th>団体</th>
+      </tr>
+      <% @users.each.with_index do |user,index| %>
+      <tr class="m-0 p-0">
+        <td><%= index+1 %>位</td>
+        <td class="text-nowrap"><%= link_to user.name,user ,class: "index_url"%></td>
+        <td class="text-nowrap">¥<%= user.money %></td>
+        <td class="text-nowrap"><%= user.group %></td>
+      </tr>
+        <% end %>
+    </table>
+   </div>
 </div>
+
