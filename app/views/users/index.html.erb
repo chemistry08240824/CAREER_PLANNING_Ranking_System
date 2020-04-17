@@ -11,9 +11,9 @@
       <% @users.each.with_index do |user,index| %>
       <tr>
         <td class="text-left m-0"><%= index+1 %>位</td>
-        <td class="text-nowrap m-0"><small><%= link_to user.name,user ,class: "index_url"%></small></td>
-        <td class="text-nowrap m-0"><small>¥<%= user.money %></small></td>
-        <td class="text-nowrap m-0"><small><%= user.group %></small></td>
+        <td class="text-nowrap m-0"><%= link_to user.name,user ,class: "index_url"%></small></td>
+        <td class="text-nowrap m-0"><small>¥<%= user.money %></td>
+        <td class="text-nowrap m-0"><%= user.group %></td>
       </tr>
         <% end %>
     </table>
